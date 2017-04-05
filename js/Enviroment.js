@@ -3,14 +3,14 @@ const Enviroment = function(c, ctx){
   this.ctx = ctx;
   this.bgPos = 0;
   this.fgPos = 0;
-  this.bgSpeed = 2;
+  this.bgSpeed = 1;
   this.bgWidth = 900;
   this.bgheight = 509
 this.bgImg = document.getElementById('bg');
 this.bgImage = document.getElementById('world');
 }
 Enviroment.prototype.update = function() {
-  // this.bgPos -= this.bgSpeed;
+  this.bgPos -= this.bgSpeed;
   if(this.bgPos < -this.bgWidth)
   this.bgPos = 0;
 };
